@@ -38,8 +38,6 @@ int main() {
     int column_counter;
     // int nb_time = 0; -> ERROR, have to put in the FOR loop, initial value = 0 for every iteration
 
-    int i, j;
-
             // Define prime numbers
             for (number = 1; number <= value; ++number) { // checking all numbers less than the value
 
@@ -57,7 +55,6 @@ int main() {
                             nb_prime = number;
                             ++column_counter;
 
-
                             // display prime numbers on 5 columns
                             cout << setw(width) << nb_prime;
 
@@ -65,12 +62,9 @@ int main() {
                                 cout << endl;
                             }
                         }
-
-
-
             }
 
-    // Quite function
+    // Quit function
 
 
     return EXIT_SUCCESS;
