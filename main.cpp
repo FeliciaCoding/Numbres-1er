@@ -12,6 +12,8 @@ using namespace std;
 
 int main() {
 
+    const int column = 5;
+    const int width  = 10;
 
 
     cout << "ce programme ..." << endl;
@@ -20,52 +22,70 @@ int main() {
     // user input + input restrictions
     int value;
 
-    do{
+    do {
 
         cout << "entrer une valeur [1-1000] : ";
         cin >> value;
 
-    } while(value <= 0 or value > 1000);
+    } while (value <= 0 or value > 1000);
 
 
     // calculate prime numbers and display the results
     cout << "Voici la liste des nombres premiers" << endl;
 
-    int nb_prime ;
-    int temp_prime, x;
+    int nb_prime;
+    int number, divisor;
+    int column_counter;
     // int nb_time = 0; -> ERROR, have to put in the FOR loop, initial value = 0 for every iteration
 
-    // Define prime numbers
-    for ( temp_prime=1; temp_prime <= value; ++temp_prime) { // checking all numbers less than the value
+    int i, j;
 
-        int nb_time = 0;
+            // Define prime numbers
+            for (number = 1; number <= value; ++number) { // checking all numbers less than the value
 
-        //  number of times of integer division
-        for (x=1; x <= temp_prime /* temp_prime/2 */ ; ++x) {
-            if (temp_prime % x ==0){
-                ++nb_time;
+                int nb_time = 0;
+
+                //  calculate the number of times it is divisible
+                for (divisor = 1; divisor <= number; ++divisor) {
+                    if (number % divisor == 0) {
+                        ++nb_time;
+                    }
+                }
+
+                        // pick up prime numbers
+                        if (nb_time == 2) {
+                            nb_prime = number;
+                            ++column_counter;
+
+
+                            // display prime numbers on 5 columns
+                            cout << setw(width) << nb_prime;
+
+                            if (column_counter%column==0){
+                                cout << endl;
+                            }
+                        }
+
+
+
             }
-        }
-
-        // pick up prime numbers
-        if (nb_time <= 2){
-            nb_prime = temp_prime;
-
-            // organise and display prime numbers
-            cout << setw(10) << nb_prime << endl;
-
-        }
-
-
-
-    }
-
 
     // Quite function
 
 
     return EXIT_SUCCESS;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
