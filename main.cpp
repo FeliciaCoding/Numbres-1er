@@ -7,6 +7,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <iomanip>
+#include <string>
 
 using namespace std;
 
@@ -16,7 +17,10 @@ int main() {
     const int width  = 10;
 
 
+
+    restart_program:
     cout << "ce programme ..." << endl;
+    cout << endl;
 
 
     // user input + input restrictions
@@ -24,10 +28,10 @@ int main() {
 
     do {
 
-        cout << "entrer une valeur [1-1000] : ";
+        cout << "entrer une valeur [2-1000] : ";
         cin >> value;
 
-    } while (value <= 0 or value > 1000);
+    } while (value <= 1 or value > 1000);
 
 
     // calculate prime numbers and display the results
@@ -63,9 +67,27 @@ int main() {
                             }
                         }
             }
+    // always display 1 empty line before start asking the following question
+    if (column_counter%column!=0){
+        cout << endl;
+    }
+    cout << endl;
 
-    // Quit function
+    // Quit/Restart function
+    char replay;
 
+    do{
+        cout << "Voulez-vous recommencer [O/N] : ";
+        cin >> replay;
+
+    } while (replay != 'O' and replay !='N') ;
+
+    if(replay == 'O'){
+        goto restart_program;
+    }
+
+    cout << endl;
+    cout << "Fin de programme" << endl;
 
     return EXIT_SUCCESS;
 }
