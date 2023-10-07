@@ -19,9 +19,8 @@ int main() {
 
 
     restart_program:
-    cout << "ce programme ..." << endl;
+    cout << "Ce programme ..." << endl;
     cout << endl;
-
 
     // user input + input restrictions
     int value;
@@ -35,6 +34,7 @@ int main() {
 
 
     // calculate prime numbers and display the results
+    cout << endl;
     cout << "Voici la liste des nombres premiers" << endl;
 
     int nb_prime;
@@ -74,15 +74,15 @@ int main() {
     cout << endl;
 
     // Quit/Restart function
-    char replay;
+    char restart;
 
     do{
         cout << "Voulez-vous recommencer [O/N] : ";
-        cin >> replay;
+        cin >> restart;
 
-    } while (replay != 'O' and replay !='N') ;
+    } while (restart != 'O' and restart !='N') ;
 
-    if(replay == 'O'){
+    if(restart == 'O'){
         goto restart_program;
     }
 
