@@ -1,7 +1,7 @@
 ## Lab03 - Numbres 1er
 
 ### Objectif
-Ecrire un programme qui affiche tous les nombres premiers comprises entre 1 et une valeur saisie par l’utilisateur.
+Ecrire un programme qui affiche tous les nombres premiers comprises entre 2 et une valeur saisie par l’utilisateur.
 
 ### A faire
 1. Saisir une valeur _N_ comprise entre 2 et 1'000.
