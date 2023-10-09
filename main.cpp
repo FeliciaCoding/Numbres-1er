@@ -38,7 +38,7 @@ int main() {
     int nb_prime;
     int number, divisor;
     int column_counter;
-    // int nb_time = 0; -> [ERROR] have to put in the FOR loop, initial value = 0 for every iteration
+    // int nb_time = 0; ---> [ERROR] have to put in the FOR loop, initial value = 0 for every iteration
 
             // Define prime numbers
             for (number = 1; number <= value; ++number) { // checking all numbers less than the value
@@ -52,14 +52,16 @@ int main() {
                     }
                 }
 
-                        // pick up prime numbers
+                        // Pick up prime numbers
                         if (nb_time == 2) {
                             nb_prime = number;
                             ++column_counter;
 
-                            // display prime numbers on 5 columns
+
                             cout << setw(width) << nb_prime;
 
+
+                            // Display prime numbers on 5 columns
                             if (column_counter%column==0){
                                 cout << endl;
                             }
